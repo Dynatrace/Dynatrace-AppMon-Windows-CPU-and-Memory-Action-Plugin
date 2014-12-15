@@ -37,5 +37,7 @@ dynaTrace Server.
 ## Installation
 
 Import the Plugin into the dynaTrace Server. For details how to do this please refer to the [dynaTrace
-documentation](https://community.dynatrace.com/community/display/DOCDT61/Manage+and+Develop+Plugins#ManageandDevelopPlugins-ManageandDevelopPlugins).
+documentation](https://community.compuwareapm.com/community/display/DOCDT61/Plugin+Management).
+
+
 
