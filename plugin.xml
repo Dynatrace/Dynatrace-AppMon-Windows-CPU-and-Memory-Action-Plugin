@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 4.1.0 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.mycompany.myplugin" name="PS Windows Action Plugin">
+    <information>
+      <category value="" />
+      <description value="Sends an email with PS information about windows systems." />
+      <supportlevel value="unsupported" />
+    </information>
+    <configuration>
+      <property key="Type" label="Type" type="list" description="What type of information to include." default="CPU">
+        <list>
+          <item value="CPU" />
+          <item value="Memory" />
+        </list>
+      </property>
+      <property key="To" label="To" type="string" description="Email Address to send the email to.  For multiple email address seperate by a ';'" default="" />
+      <property key="From" label="From" type="string" description="Email address for the message to be sent from." default="" />
+      <property key="Subject" label="Subject" type="string" description="Subject of the email will be in the format of: &lt;server&gt; High &lt;Type&gt; @ &lt;time&gt; &lt;Subject input&gt;" default="" />
+      <property key="MailServer" label="MailServer" type="string" description="Address of the mail server to use for the email." default="" />
+      <property key="MailPort" label="MailPort" type="string" description="Port on the mail server to use." default="25" />
+      <property key="User" label="User" type="string" description="The Username to use for remote access." default="" />
+      <property key="Pass" label="Pass" type="password" description="The Password to use for remote access." default="" />
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.action" id="com.mycompany.myplugin.action" name="PS Windows Action Plugin">
+    <plugin configid="com.mycompany.myplugin" class="com.mycompany.myplugin.MyPlugin" />
+  </extension>
+</plugin>
+
